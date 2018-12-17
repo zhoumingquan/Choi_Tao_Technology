@@ -215,6 +215,9 @@
               </el-form-item>
               <el-form-item>
                 <div style="margin-left: 5px; width: 1115px;">
+                  <div slot="header" class="clearfix">
+                    <el-button type="primary" style="margin-left: 1080px" @click="save_add">保存</el-button>
+                  </div>
                   <el-table
                     :data="tableData_add"
                     style="width: 100%"
@@ -272,9 +275,6 @@
                     </el-table-column>
                   </el-table>
                 </div>
-              </el-form-item>
-              <el-form-item>
-                <el-button type="primary" style="margin-left: 1080px" @click="save_add">保存</el-button>
               </el-form-item>
             </el-form>
           </el-tab-pane>
@@ -604,6 +604,9 @@
             </div>
           </el-tab-pane>
         </el-tabs>
+        <span slot="footer" class="dialog-footer">
+          <el-button type="primary" size="small">保 存</el-button>
+        </span>
       </el-dialog>
     </div>
     <!-- 用户联系信息页面 -->
@@ -3613,6 +3616,14 @@ export default {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   cursor: pointer;
+}
+.el-dialog__footer {
+  padding: 20px;
+  padding-top: 10px;
+  text-align: right;
+  height: 51px;
+  background-color: #ccc;
+  box-sizing: border-box;
 }
 
 </style>
